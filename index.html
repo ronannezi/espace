@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura no Sistema Solar | Quiz de Ciências</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars" aria-hidden="true"></div>
+
+    <header class="header">
+        <h1 class="logo">🚀 Aventura no Sistema Solar</h1>
+        <p class="subtitle">Quiz de Ciências • 6º Ano</p>
+    </header>
+
+    <main class="main">
+        <!-- Tela Inicial -->
+        <section id="start-screen" class="screen active">
+            <div class="card start-card">
+                <div class="planet-icon">🪐</div>
+                <h2>Pronto para explorar o espaço?</h2>
+                <p class="description">
+                    Teste seus conhecimentos sobre o Sistema Solar!<br>
+                    São 10 perguntas divertidas. Você consegue acertar todas?
+                </p>
+                <div class="info-box">
+                    <span>⭐ 10 perguntas</span>
+                    <span>❤️ 3 vidas</span>
+                    <span>🏆 Pontuação final</span>
+                </div>
+                <button id="btn-start" class="btn btn-primary">Começar a Aventura!</button>
+            </div>
+        </section>
+
+        <!-- Tela do Jogo -->
+        <section id="game-screen" class="screen">
+            <div class="game-header">
+                <div class="lives" id="lives">❤️ ❤️ ❤️</div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="score">Pontos: <span id="score">0</span></div>
+            </div>
+
+            <div class="card question-card">
+                <p class="question-number" id="question-number">Pergunta 1 de 10</p>
+                <h2 class="question-text" id="question-text">Carregando pergunta...</h2>
+                <div class="options" id="options">
+                    <!-- Opções geradas pelo JS -->
+                </div>
+                <div class="feedback" id="feedback"></div>
+            </div>
+        </section>
+
+        <!-- Tela Final -->
+        <section id="end-screen" class="screen">
+            <div class="card end-card">
+                <div class="result-icon" id="result-icon">🏆</div>
+                <h2 id="result-title">Parabéns, Astronauta!</h2>
+                <p class="final-score">Sua pontuação: <span id="final-score">0</span> / 100</p>
+                <p class="result-message" id="result-message">Você explorou o Sistema Solar com sucesso!</p>
+                <div class="end-buttons">
+                    <button id="btn-restart" class="btn btn-primary">Jogar Novamente</button>
+                    <button id="btn-home" class="btn btn-secondary">Voltar ao Início</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Feito com 💙 para alunos do 6º Ano • Ciências</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
